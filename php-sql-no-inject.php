@@ -29,6 +29,7 @@ if ( !function_exists('array_map_recursive') ) {
 
 function _remove_sql_inject($str) {
     $str = urldecode($str);
+    // add more pattern
     $pat[] = "/'\s+AND\s+extractvalue.*/i";
     $pat[] = "/'\s+and\(.*/i";
     $pat[] = "/select\s+.*?\s+from.*/i";
